@@ -40,14 +40,15 @@ pipeline {
                 }
            }
        } 
-        stage("Quality Gate"){
+       
+       stage("Quality Gate"){
            steps {
                script {
-                    waitForQualityGaye abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
-                    }
-                }
-           } 
+                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+                }	
+            }
 
+        }
         
         
    }
