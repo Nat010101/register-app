@@ -11,6 +11,7 @@ pipeline {
                 cleanWs()
                 }
         }
+    }
 
         stage("Checkout from SCM"){
                 steps {
@@ -40,4 +41,4 @@ pipeline {
                 }
            }
        } 
-     
+}    
