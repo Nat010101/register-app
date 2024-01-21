@@ -10,7 +10,7 @@ pipeline {
                 cleanWs()
                 }
         }
-    }
+    
         stage("Checkout from SCM"){
                 steps {
                     git branch: 'main', credentialsId: 'github', url: 'https://github.com/Nat010101/register-app.git'
@@ -39,4 +39,5 @@ pipeline {
                 }
            }
        } 
- }    
+   }    
+}
