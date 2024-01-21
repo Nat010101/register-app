@@ -4,7 +4,6 @@ pipeline {
         jdk 'Java17'
         maven 'Maven3'
     }
-    
     stages{
         stage("Cleanup Workspace"){
                 steps {
@@ -12,7 +11,6 @@ pipeline {
                 }
         }
     }
-
         stage("Checkout from SCM"){
                 steps {
                     git branch: 'main', credentialsId: 'github', url: 'https://github.com/Nat010101/register-app.git'
@@ -41,4 +39,4 @@ pipeline {
                 }
            }
        } 
-}    
+ }    
